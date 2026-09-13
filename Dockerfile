@@ -1,9 +1,9 @@
-FROM smartbugs/osiris:latest
+FROM smartbugs/osiris:d1ecc37
 
 WORKDIR /root
 
-# Use the code from this repository while reusing the prebuilt legacy
-# Osiris toolchain (Python 2, solc 0.4.21, evm 1.8.3 and Z3 4.6.0).
+# Reuse the published legacy Osiris toolchain instead of rebuilding
+# Ubuntu 16.04, Python 2, solc 0.4.21, evm 1.8.3 and Z3 from source.
 COPY osiris /root/osiris
 COPY tests /root/tests
 COPY datasets/CVEs /root/datasets/CVEs
